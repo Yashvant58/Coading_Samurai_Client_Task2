@@ -7,7 +7,7 @@ function Home2(){
         if (person != null) {
           setName("Hello " + person + "! How are you today? Please go to Add-Task button and add your today task.");
         }
-    },[])
+    },[name])
     return(
 <div className="home2_container">
 <h1 className="home_name">Welcome {name}</h1>

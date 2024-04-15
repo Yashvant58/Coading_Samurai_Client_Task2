@@ -7,7 +7,7 @@ const [currentDate, setCurrentDate] = useState(new Date());
 useEffect(() => {
   const intervalId = setInterval(() => {
     setCurrentDate(new Date());
-  }, 1000 * 60); // Update every minute
+  }, 1000); // Update every minute
 
   return () => clearInterval(intervalId);
 }, []);
@@ -19,8 +19,7 @@ month: 'long',
 day: 'numeric',
 hour: 'numeric',
 minute: 'numeric',
-second: 'numeric',
-timeZoneName: 'short'
+second: 'numeric'
 };
 const formattedDate = currentDate.toLocaleDateString(undefined, options);
 

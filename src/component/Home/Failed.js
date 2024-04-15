@@ -9,7 +9,7 @@ function Failed(){
         let c=1;
        useEffect(
            () => {
-               fetch('https://coding-samurai-server.onrender.com/todo')
+               fetch('http://localhost:4000/todo')
                  .then((res) => {
                    return res.json();
                  })
@@ -26,7 +26,7 @@ function Failed(){
        }
           const deleteRecent=async(itemId)=>{
           try{
-           const response=await fetch(`https://coding-samurai-server.onrender.com/todo/${itemId}`,{
+           const response=await fetch(`http://localhost:4000/todo/${itemId}`,{
             method:'DELETE'
            })
            if (response.ok) {
@@ -42,7 +42,7 @@ function Failed(){
           }  
             }
 return(
-    
+  <div className='content'>
 <table className="table" >
         <thead>
           <tr >
@@ -52,6 +52,7 @@ return(
             <th scope="col">Work</th>
             <th scope="col">Level</th>
             <th scope="col">Position</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
     {records.map((data,index)=>(
@@ -64,14 +65,14 @@ return(
             <td>{data.work}</td>
             <td>{data.level}</td>
             <td>{data.position}</td>
-            <td type="button" 
-            style={{background:"red",color:"white",borderRadius:"10px",margin:"5px"}} 
+            <td type="button"  
             className='button' onClick={()=>deleteRecent(data._id)}><FontAwesomeIcon icon={faTrash} /></td>
           </tr>
         </tbody>
         // 
     ))}
     </table>
+    </div>  
   
 )
 }

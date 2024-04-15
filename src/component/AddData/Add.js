@@ -41,7 +41,9 @@ const Add = () => {
   };
 
   return (
+    <div className='content'>
     <form onSubmit={handleSubmit}>
+    <div className='addContainer'>
       <table className="table">
         <thead>
           <tr>
@@ -65,14 +67,14 @@ const Add = () => {
           <input type="time" value={endTime} onChange={(e) => handleInputChange(e, setEndTime)}required />
             </td>
     <td>
-    <input type="text" value={work} onChange={(e) => handleInputChange(e, setWork)} required/>
+    <input type="text" value={work} placeholder='Write your Goal...' onChange={(e) => handleInputChange(e, setWork)} required/>
     </td>
     <td>
-    <input type="Number" min={0} max={10} value={level} onChange={(e) => handleInputChange(e, setLevel)} required/>
+    <input type="Number" min={0} max={10} value={level} placeholder="0"onChange={(e) => handleInputChange(e, setLevel)} required/>
     </td>
     <td>
     <select value={position} onChange={(e) => handleInputChange(e, setPosition)} required>
-          <option value="pending">select</option>
+          <option value="select">select</option>
           <option value="pending">pending</option>
           <option vlaue="completed">completed</option>
           <option value="failed">failed</option>
@@ -82,10 +84,11 @@ const Add = () => {
     </tr>
         </tbody>
       </table>
-      <br />
-
-      <button type="submit">schedule</button>
+      </div>
+      <br/>
+      <button className='schedule' type="submit">Schedule</button>
     </form>
+    </div>
   );
 };
 

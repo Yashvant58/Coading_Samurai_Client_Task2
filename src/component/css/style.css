@@ -1,11 +1,19 @@
+
+body{
+    background-color: #E3E6E3;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 .home{
     display: flex;
     border-bottom-style: solid;
-    border-bottom-color: #92a8d1;
-    justify-content:space-around;
-    padding:20px;
     background-color: rgb(88, 165, 88);
-
+    /* margin:0 70px 0 70px; */
+    width:80%;
+    margin: 0 auto; 
   }
 .home_link{
     text-decoration: none;
@@ -13,38 +21,67 @@
 }
 .home_link:hover, .home_link:active {
     color: white;
-    text-decoration:underline;
   }
   .home_name{
     text-align: center;
     color: rgb(18, 35, 112);
-    
-
   }
   .home2_container{
    padding: 50px;
+   margin-left: 70px;
+   margin-right: 70px;
 
   }
+  .addContainer{
+    position: relative;
+    width: 100%; 
+  }
+.schedule{
+  background-color: green;
+  position: absolute;
+  right: 10%; 
+}
 
 *{
-  margin: 0px;
-  padding: 0 20px;
   box-sizing: border-box;
 }
-.tbody{
-  padding-left: 40px;
-}
 .table{
-  margin-left: 20px;
+  width: 100%;
+
 }
-.button{
-  background-color: red;
-  border-radius: 10px;
-  margin: 5px;
+
+td,th{
+  width: 17vw;
+/* width:100%; */
+  text-align: center; 
+}
+
+
+.content {
+  padding-bottom: 300px;
+  /* margin-bottom: 300px; */
+  width: 80%;
+  margin: 0 auto; 
+}
+.recent:hover,.live:hover,.upcomming:hover{
+background-color: rgb(47, 116, 47);
+}
+.recent,.live,.upcomming{
+  background-color: rgb(88, 165, 88);
+  padding: 10px;
+  border-right:1px solid white;
+
 }
 Link{
     text-decoration: none;
     color:aliceblue;
+
+}
+.navbar{
+  /* margin:0 70px 0 70px; */
+  width: 80%;
+  /* justify-items: center; */
+  margin: 0 auto; 
 
 }
 .navbar-brand{
@@ -52,26 +89,36 @@ Link{
   color: rgb(91, 36, 137);
   font-weight: bolder;
 }
-@media screen and  (max-width: 600px){
-  *{
-    padding: 0;
-  }
-  .tbody{
-    padding-left: 0px;
-  }
-  .table{
-    margin-left: 0px;
-  }
-  .button{
- 
-    border-radius: 5px;
-    margin: 0px;
-  }
-  .home2_container{
-    padding: 0px;
- 
-   }
-td{
-  padding: 0px;
+
+@media screen and  (max-width: 768px){
+  
+    .table{
+      width: 100%;
+    
+    }
+  
+.content{
+  width: 98vh;
+  margin:0px;
+  /* background-color: red; */
+  /* width:100%; */
+  margin: 0 0; 
+
 }
+.navbar{
+  /* width:100%; */
+  width:98vh;
 }
+.home{
+  /* width:100%; */
+  width:98vh;
+}
+td,th{
+  width: auto;
+  
+}
+.schedule{
+  position: fixed;
+}
+
+} 

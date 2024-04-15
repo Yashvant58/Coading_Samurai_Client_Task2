@@ -7,6 +7,7 @@ return(
         <div className='home'>
         <div className='recent'>
             <Link className="home_link"to="/recent">Recent</Link>
+            
         </div>
         <div className='live'>
             <Link className="home_link" to="/live">Live</Link>
